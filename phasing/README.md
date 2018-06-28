@@ -1,5 +1,5 @@
-# Phasing of given iSNVs
-## The application in YFV amplicon-seq dataset
+# Phasing of serial iSNVs
+## The application for the YFV amplicon-seq dataset
 
 The phasing is implemented for selected serial iSNVs. As the distribution of serial iSNVs is limited, the phasing is performed by analyse the corresponding sequencing bases within reads.
 
