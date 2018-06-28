@@ -1,3 +1,5 @@
+# The batch file to mapping libaries of YFV amplicon-seq fastq data.
+
 use warnings;
 use strict;
 
