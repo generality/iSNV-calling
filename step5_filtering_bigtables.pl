@@ -101,7 +101,8 @@ for (my $i = 0; $i < @samples; $i ++){
 				    $rh_siteMaxStranded->{$samples[$i]}->{$p} >= $THRES_strandedRatioCut &&
                     $rh_siteMaxStranded->{$samples[$i]}->{$p} <= 1-$THRES_strandedRatioCut &&
 					! defined $rh_pos2isprimer->{$p}){
-						$rh_SNP->{$samples[$i]}->{$p} = int((1 - $rh_siteMinorFreq->{$samples[$i]}->{$p})*10000)/10000;
+						#$rh_SNP->{$samples[$i]}->{$p} = int((1 - $rh_siteMinorFreq->{$samples[$i]}->{$p})*10000)/10000;
+						$rh_SNP->{$samples[$i]}->{$p} = int(($rh_siteMinorFreq->{$samples[$i]}->{$p})*10000)/10000;
 						$cValid_SNP ++;
 				}
 			}
@@ -361,7 +362,7 @@ sub list_all_info{
 	print OUT "#samp\tpos\tisnvFreq\tMuAF\t";
 	for (my $i = 0; $i< @terms; $i++){
 		print OUT "$terms[$i]\t";
-	} print "\n";
+	} print OUT "\n";
 	while (my ($samp, $rh_dat) = each %$rh_isnv){
 		my @p = sort {$a<=>$b} keys %$rh_dat;
 		for(my $i = 0; $i < @p; $i ++){
