@@ -22,4 +22,5 @@ The clean reads were aligned (pair-end alignment) to the earliest strain of EBOV
 
 # Reference
 [1] Ni M, Chen C, Qian J, Xiao HX, Shi WF, Luo Y, Wang HY, Li Z, Wu J, Xu PS, Chen SH, Wong G, Bi YH, Xia ZP, Li W, Lu HJ, Ma JC, Tong YG, Zeng H, Wang SQ, Gao FG, Bo XC, Liu D. (2016). Intra-host dynamics of Ebola virus during 2014. Nature Microbiology 1(11), 16151.
+
 [2]Schirmer, M., Ijaz, U.Z., D'Amore, R., Hall, N., Sloan, W.T., and Quince, C. (2015). Insight into biases and sequencing errors for amplicon sequencing with the Illumina MiSeq platform. Nucleic Acids Res 43, e37.
