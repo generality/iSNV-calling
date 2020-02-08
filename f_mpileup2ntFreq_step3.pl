@@ -25,11 +25,13 @@ print "\nInput file: $file\nOutput file: $file.ntfreq\nThreshold for q-val: $QTH
 print OUT "#chr\tpos\tref\tdep(mpileup)\tdep(-indel)\tntfreqPatt\tA\tG\tC\tT\ttot(Q$QTHRES)\tFa\tFg\tFc\tFt\t"."A5\'/3\'\tG5/3\tC5/3\tT5/3\tA5\'(na_if_dep<5)\tG5\tC5\tT5\tentropy\n";
 while (<FP>){
 	chomp;
+	next if (/^\[mpileup\]/);
 	my @row = split /\s+/, $_;
 	my $des = $row[0];
 	my $ref = $row[2];
 	my $pos = $row[1];
 	my $dep = $row[3];
+	next if ($dep < 1);
 	my $seqPatt = $row[4];
 	my $qval= $row[5];
 	my ($formatSeqPatt, $formatSeqQval,$depNoIndel);
